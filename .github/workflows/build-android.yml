@@ -37,7 +37,7 @@ jobs:
     - name: Build Android APK
       run: |
         cd mobile-app
-        npx expo run:android --variant debug
+        npx react-native run-android --variant=debug
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
