@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd mobile-app
-        npm install --legacy-peer-deps
+        npm install --force
         
     - name: Setup Java
       uses: actions/setup-java@v4
