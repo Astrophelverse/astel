@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd mobile-app
-        npm install --force
+        npm install
         
     - name: Setup Java
       uses: actions/setup-java@v4
