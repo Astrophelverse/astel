@@ -25,6 +25,11 @@ jobs:
         cd mobile-app
         npm install
         
+    - name: Clear Expo cache
+      run: |
+        cd mobile-app
+        npx expo install --fix
+        
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
@@ -37,6 +42,7 @@ jobs:
     - name: Generate native Android project
       run: |
         cd mobile-app
+        rm -rf android
         npx expo prebuild --platform android
         
     - name: Build Android APK
